@@ -1,42 +1,20 @@
-.project-container {
-    padding: 50px 0;
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
+.section-header {
+  color: #222;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
 }
 
-.project-header {
-    text-align: center;
-    color: darkmagenta;
-    font-size: 4.5vw;
+.view-text,
+li {
+    padding-left: 20px
 }
 
-.project-container > p,
-.project-container > ol,
-.project-container > ul,
-.project-header {
-    padding: 8px;
-    font-weight: 300;
-    letter-spacing: .09em;
-    text-transform: uppercase;
+ul,
+ol {
+  list-style: none;
+  padding-inline-start: 0px;
 }
 
-.button {
-    display: block;
-    margin-left: auto;
-    padding: 8px 16px;
-    border: none;
-    background: #333;
-    color: #f2f2f2;
-    text-transform: uppercase;
-    letter-spacing: .09em;
-    border-radius: 2px;
-}
-
-#link {
-    text-decoration: none;
-    margin: 2px 0 2px auto;
-}
-.button:hover {
-    cursor: pointer;
+#edit-link {
+    margin: 0 0 7px auto;
 }

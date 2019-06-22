@@ -1,19 +1,8 @@
-.list-header {
-  text-align: center;
-  color: whitesmoke;
-  font-size: 4vw;
-  margin: 50px auto;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  font-weight: 300;
-}
-
 .list-projecttiles {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  width: 80%;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -32,8 +21,6 @@
 }
 
 #search {
-	padding: 15px;
-	border: none;
 	max-width: 500px;
 }
 

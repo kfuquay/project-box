@@ -26,18 +26,6 @@ class Dashboard extends React.Component {
       .then(this.setState({ isLoading: false }))
       .catch(this.context.setError);
   }
-  
-  handleSwitch = () => {
-    this.setState({
-      isChecked: !this.state.isChecked,
-    });
-  };
-
-  updateQueryValue = e => {
-    this.setState({ results: [], query: e.target.value }, function() {
-      this.handleSearch();
-    });
-  };
 
   handleSearch = () => {
     const query = this.state.query;
@@ -50,6 +38,12 @@ class Dashboard extends React.Component {
       const results = this.context.projectList;
       this.setState({ results });
     }
+  };
+  
+  handleSwitch = () => {
+    this.setState({
+      isChecked: !this.state.isChecked,
+    });
   };
 
   renderProjects() {
@@ -68,17 +62,23 @@ class Dashboard extends React.Component {
     }
   }
 
+  updateQueryValue = e => {
+    this.setState({ results: [], query: e.target.value }, function() {
+      this.handleSearch();
+    });
+  };
+
   render() {
     const greeting =
       this.context.currentUser !== "" ? (
-        <h2>{this.context.currentUser}'s Dashboard</h2>
+        <h3 className="large-text">{this.context.currentUser}'s Dashboard</h3>
       ) : (
-        <h2>Dashboard</h2>
+        <h3 className="large-text">Dashboard</h3>
       );
     const { error } = this.context;
     return (
-      <section className="project-list">
-        <header className="list-header">{greeting}</header>
+      <section className="main-container">
+        <header>{greeting}</header>
         {this.context.currentUser !== "" ? (
           <div className="switch-container">
             <label className="switch">

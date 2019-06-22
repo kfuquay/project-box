@@ -1,68 +1,28 @@
-.create-project-form {
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
+#summary {
+    width: 100%;
 }
 
-#add-input-button {
-    margin: 5px;
-}
-
-#columns {
+.grid-container {
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 89% 10%;
+    width: 100%;
+    margin-bottom: 5px;
 }
 
-.input-container {
-    display: grid;
-    grid-template-columns: 100%;
+.short-input {
+    width: auto;
 }
 
-.input-container:not(:last-child) {
-    margin-bottom: 20px;
+.input-button {
+    height: 100%;
+    width: auto;
 }
 
-.input-container > label {
-    padding: 8px;
-    font-weight: 300;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-    max-width: 220px;
+.button-section>button {
+    margin: 0 0 7px auto;
 }
 
-.input-section input,
-#columns input {
-    padding: 15px;
-    border: none;
-}
-
-#columns button {
-    margin-left: auto;
-    padding: 8px 16px;
-    border: none;
-    background: #333;
-    color: #f2f2f2;
-    text-transform: uppercase;
-    letter-spacing: .09em;
-    border-radius: 2px;
-}
-
-.input-container > input, 
-.input-container > button,
-#columns > input,
-#columns > button {
-    margin: 5px;
-}
-
-#button-section {
+.button-section {
+    display: flex;
     flex-direction: column;
-}
-
-#button-section > button {
-    margin: 2px 0 2px auto;
-}
-
-.form-section > input {
-    margin: 5px;
-    display: block;
 }

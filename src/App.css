@@ -1,3 +1,105 @@
 .app {
   font-family: Helvetica, sans-serif;
 }
+
+.main-container {
+  padding: 30px 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+input {
+  font-size: 16px;
+  padding: 15px;
+  border: none;
+  width: 100%;
+}
+
+label {
+  color: whitesmoke;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 50px 0; */
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+form div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+form > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+form div > label {
+  padding: 8px 8px 8px 0;
+  font-weight: 300;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+button {
+  background: #333;
+  border: none;
+  border-radius: 2px;
+  color: #f2f2f2;
+  letter-spacing: 0.09em;
+  margin-left: auto;
+  padding: 8px 16px;
+  text-transform: uppercase;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  font-size: 20px;
+}
+
+.large-text {
+  text-align: center;
+  color: whitesmoke;
+}
+/* 
+.large-text h3 {
+  font-size: 24px;
+} */
+
+h3 {
+    font-size: 24px;
+}
+
+.text,
+.large-text {
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 18px;
+    color: whitesmoke;
+    font-weight: 300;
+
+}
+/* 
+.small-text {
+  font-size: 13px;
+  color: #333;
+} */

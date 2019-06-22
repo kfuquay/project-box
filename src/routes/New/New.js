@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ProjectForm from '../../components/ProjectForm/ProjectForm'
 
 function New() {
   return(
-    <Fragment>
-      <h1 className="large-text">New Project</h1>
+    <div className="main-container">
+      <h3 className="large-text">New Project</h3>
       <ProjectForm params={{ edit: 'N' }} />
-    </Fragment>
+    </div>
   )
 }
 

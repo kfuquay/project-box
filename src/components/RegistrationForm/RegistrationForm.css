@@ -1,44 +1,4 @@
-.signup-form {
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.signup-form div {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.signup-form > div:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-.signup-form div > label {
-    padding: 8px;
-    font-weight: 300;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-    flex: 1 0 120px;
-    max-width: 220px;
-}
-
-div > label + * {
-    flex: 1 0 220px;
-}
-
-div input {
-    padding: 15px;
-    border: none;
-}
-
-.signup-form div button {
-    margin-left: auto;
-    padding: 8px 16px;
-    border: none;
-    background: #333;
-    color: #f2f2f2;
-    text-transform: uppercase;
-    letter-spacing: .09em;
-    border-radius: 2px;
+.small-text {
+    font-size: 13px;
+    color: #333;
 }

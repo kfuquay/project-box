@@ -31,24 +31,52 @@ class App extends Component {
     };
   }
 
+  clearError = () => {
+    this.setState({ error: null });
+  };
+
+  clearProject = project => {
+    this.setState({ project: "" });
+  };
+
+  deleteProject = projectId => {
+    ProjectsApiService.deleteProject(projectId)
+      .then(() => this.props.history.push("/dashboard"))
+  };
+
+  editProject = project => {
+    ProjectsApiService.editProject(project);
+    this.props.history.push("/dashboard");
+  };
+
+
+  handleClickCancel = () => {
+    this.props.history.push("/dashboard");
+  };
+
   handleLogin = e => {
     e.preventDefault();
     this.setState({ currentUser: this.state.loginUsername });
     this.props.history.push("/dashboard");
   };
 
-  handleUsernameChange = e => {
-    this.setState({ loginUsername: e.target.value });
+  handleLoginSuccess = () => {
+    const { location, history } = this.props;
+    const destination = (location.state || {}).from || "/dashboard";
+    history.push(destination);
   };
 
   handleSubmitNewProject = project => {
     ProjectsApiService.postProject(project)
-    .then(() => this.props.history.push("/dashboard"))
+      .then(() => this.props.history.push("/dashboard"))
   };
 
-  editProject = project => {
-    ProjectsApiService.editProject(project);
-    this.props.history.push("/dashboard");
+  handleUsernameChange = e => {
+    this.setState({ loginUsername: e.target.value });
+  };
+
+  redirectToLogin = () => {
+    this.props.history.push("/login");
   };
 
   setCurrentUser = username => {
@@ -59,6 +87,11 @@ class App extends Component {
     this.setState({ currentUserId: userId });
   };
 
+  setError = error => {
+    console.error(error);
+    this.setState({ error });
+  };
+
   setProjectList = projectList => {
     this.setState({ projectList });
   };
@@ -67,60 +100,28 @@ class App extends Component {
     this.setState({ project });
   };
 
-  clearProject = project => {
-    this.setState({ project: "" });
-  };
-
-  setError = error => {
-    console.error(error);
-    this.setState({ error });
-  };
-
-  clearError = () => {
-    this.setState({ error: null });
-  };
-
-  deleteProject = projectId => {
-    ProjectsApiService.deleteProject(projectId)
-    .then(() => this.props.history.push("/dashboard"))
-  };
-
-  redirectToLogin = () => {
-    this.props.history.push("/login");
-  };
-
-  handleClickCancel = () => {
-    this.props.history.push("/dashboard");
-  };
-
-  handleLoginSuccess = () => {
-    const { location, history } = this.props;
-    const destination = (location.state || {}).from || "/dashboard";
-    history.push(destination);
-  };
-
   render() {
     const contextValue = {
-      handleLoginSuccess: this.handleLoginSuccess,
+      clearError: this.clearError,
+      clearProject: this.clearProject,
       currentUser: this.state.currentUser,
       currentUserId: this.state.currentUserId,
+      deleteProject: this.deleteProject,
+      editProject: this.editProject,
+      handleClickCancel: this.handleClickCancel,
+      handleLogin: this.handleLogin,
+      handleLoginSuccess: this.handleLoginSuccess,
+      handleSubmitNewProject: this.handleSubmitNewProject,
+      handleUsernameChange: this.handleUsernameChange,
       loginUsername: this.state.loginUsername,
       projects: this.state.projects,
+      projectList: this.state.projectList,
       redirectToLogin: this.redirectToLogin,
-      handleLogin: this.handleLogin,
-      handleUsernameChange: this.handleUsernameChange,
-      handleSubmitNewProject: this.handleSubmitNewProject,
-      editProject: this.editProject,
       setCurrentUser: this.setCurrentUser,
       setCurrentUserId: this.setCurrentUserId,
       setError: this.setError,
-      clearError: this.clearError,
       setProject: this.setProject,
-      clearProject: this.clearProject,
       setProjectList: this.setProjectList,
-      projectList: this.state.projectList,
-      deleteProject: this.deleteProject,
-      handleClickCancel: this.handleClickCancel,
     };
 
     return (

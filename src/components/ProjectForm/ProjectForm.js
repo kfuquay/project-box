@@ -11,7 +11,7 @@ class ProjectForm extends Component {
       steps: [""],
       title: "",
       summary: "",
-      id: "",
+      id: ""
     };
   }
 
@@ -26,17 +26,21 @@ class ProjectForm extends Component {
         summary: this.props.params.project.summary,
         id: this.props.params.project.id,
         materials: this.props.params.project.materials,
-        steps: this.props.params.project.steps,
+        steps: this.props.params.project.steps
       });
     }
   }
 
-  handleTitleChange = e => {
-    this.setState({ title: e.target.value });
+  handleAddMaterial = () => {
+    this.setState({
+      materials: this.state.materials.concat("")
+    });
   };
 
-  handleSummaryChange = e => {
-    this.setState({ summary: e.target.value });
+  handleAddStep = () => {
+    this.setState({
+      steps: this.state.steps.concat("")
+    });
   };
 
   handleMaterialNameChange = index => e => {
@@ -47,6 +51,20 @@ class ProjectForm extends Component {
     this.setState({ materials: newMaterials });
   };
 
+  handleRemoveMaterial = index => () => {
+    this.setState({
+      materials: this.state.materials.filter(
+        (material, mindex) => index !== mindex
+      )
+    });
+  };
+
+  handleRemoveStep = index => () => {
+    this.setState({
+      steps: this.state.steps.filter((step, sindex) => index !== sindex)
+    });
+  };
+
   handleStepNameChange = index => e => {
     const newSteps = this.state.steps.map((step, sindex) => {
       if (index !== sindex) return step;
@@ -55,30 +73,12 @@ class ProjectForm extends Component {
     this.setState({ steps: newSteps });
   };
 
-  handleAddMaterial = () => {
-    this.setState({
-      materials: this.state.materials.concat(""),
-    });
+  handleSummaryChange = e => {
+    this.setState({ summary: e.target.value });
   };
 
-  handleAddStep = () => {
-    this.setState({
-      steps: this.state.steps.concat(""),
-    });
-  };
-
-  handleRemoveMaterial = index => () => {
-    this.setState({
-      materials: this.state.materials.filter(
-        (material, mindex) => index !== mindex
-      ),
-    });
-  };
-
-  handleRemoveStep = index => () => {
-    this.setState({
-      steps: this.state.steps.filter((step, sindex) => index !== sindex),
-    });
+  handleTitleChange = e => {
+    this.setState({ title: e.target.value });
   };
 
   handleSubmit = e => {
@@ -89,7 +89,7 @@ class ProjectForm extends Component {
       user_id: this.context.currentUserId,
       materials: this.state.materials,
       steps: this.state.steps,
-      id: this.state.id,
+      id: this.state.id
     };
     if (this.props.params.edit === "Y") {
       this.context.editProject(project);
@@ -97,17 +97,18 @@ class ProjectForm extends Component {
       this.context.handleSubmitNewProject(project);
     }
   };
+
   render() {
     return (
-      <section className="form-container">
+      <Fragment>
         {this.context.currentUser === "" ? (
-          <p className="error">Please Log In</p>
+          <p className="error"> Please Log In </p>
         ) : (
           <Fragment />
         )}
-        <form className="create-project-form" onSubmit={this.handleSubmit}>
-          <div className="input-container">
-            <label htmlFor="title">Project title</label>
+        <form onSubmit={this.handleSubmit}>
+          <div>
+            <label htmlFor="title"> Project title </label>
             <input
               type="text"
               name="title"
@@ -119,8 +120,8 @@ class ProjectForm extends Component {
               required
             />
           </div>
-          <div className="input-container">
-            <label htmlFor="summary">Summary</label>
+          <div>
+            <label htmlFor="summary"> Summary </label>
             <textarea
               name="summary"
               id="summary"
@@ -129,11 +130,12 @@ class ProjectForm extends Component {
               onChange={this.handleSummaryChange}
             />
           </div>
-          <div className="input-container">
-            <label htmlFor="material">Materials</label>
+          <div>
+            <label htmlFor="material"> Materials </label>
             {this.state.materials.map((material, index) => (
-              <div id="columns" key={index}>
+              <div className="grid-container" key={index}>
                 <input
+                  className="short-input"
                   type="text"
                   name="material"
                   aria-labelledby="material"
@@ -141,8 +143,36 @@ class ProjectForm extends Component {
                   onChange={this.handleMaterialNameChange(index)}
                 />
                 <button
+                  className="input-button"
                   type="button"
                   onClick={this.handleRemoveMaterial(index)}
+                >
+                  -
+                </button>
+              </div>
+            ))}
+          </div>
+          <div className="button-section">
+            <button type="button" onClick={this.handleAddMaterial}>
+              +Material
+            </button>
+          </div>
+          <div className="input-container">
+            <label htmlFor="step"> Steps </label>
+            {this.state.steps.map((step, index) => (
+              <div className="grid-container" key={index}>
+                <input
+                  className="short-input"
+                  type="text"
+                  name="step"
+                  aria-labelledby="step"
+                  value={step}
+                  onChange={this.handleStepNameChange(index)}
+                />
+                <button
+                  type="button"
+                  className="input-button"
+                  onClick={this.handleRemoveStep(index)}
                 >
                   {" "}
                   -{" "}
@@ -150,44 +180,19 @@ class ProjectForm extends Component {
               </div>
             ))}
           </div>
-          <div className="form-section button-section">
-            <button type="button" onClick={this.handleAddMaterial}>
-              + Material
-            </button>
-          </div>
-
-          <div className="input-container">
-            <label htmlFor="step">Steps</label>
-            {this.state.steps.map((step, index) => (
-              <div id="columns" key={index}>
-                <input
-                  type="text"
-                  name="step"
-                  aria-labelledby="step"
-                  value={step}
-                  onChange={this.handleStepNameChange(index)}
-                />
-                <button type="button" onClick={this.handleRemoveStep(index)}>
-                  {" "}
-                  -{" "}
-                </button>
-              </div>
-            ))}
-          </div>
-          <div className="form-section button-section">
+          <div className="button-section">
             <button type="button" onClick={this.handleAddStep}>
-              + Step
-            </button>
+              +Step{" "}
+            </button>{" "}
           </div>
-
-          <div className="form-section" id="button-section">
-            <button type="submit">Submit</button>
+          <div className="button-section">
+            <button type="submit"> Submit </button>
             <button type="button" onClick={this.context.handleClickCancel}>
-              Cancel
+              Cancel{" "}
             </button>
-          </div>
-        </form>
-      </section>
+          </div>{" "}
+        </form>{" "}
+      </Fragment>
     );
   }
 }

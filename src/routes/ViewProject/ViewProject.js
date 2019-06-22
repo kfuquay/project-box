@@ -5,7 +5,7 @@ import "./ViewProject.css";
 
 class ViewProject extends Component {
   static defaultProps = {
-    match: { params: {} },
+    match: { params: {} }
   };
 
   static contextType = ProjectContext;
@@ -16,18 +16,18 @@ class ViewProject extends Component {
     );
     return (
       <Fragment>
-        <section className="project-container">
-          <h2 className="project-header">{project.title}</h2>
-          <p className="project-summary">Summary: </p>
-          <p>{project.summary}</p>
+        <section className="main-container">
+          <h1 className="large-text">{project.title}</h1>
+          <p className="section-header">Summary: </p>
+          <p className="view-text text">{project.summary}</p>
           {project.materials[0] === "" ? (
             <Fragment />
           ) : (
             <Fragment>
-              <p>Materials Needed:</p>{" "}
-              <ul className="materials-list">
+              <p className="section-header">Materials Needed:</p>{" "}
+              <ul>
                 {project.materials.map((material, index) => {
-                  return <li key={index}>{material}</li>;
+                  return <li  className="text" key={index}>{material}</li>;
                 })}
               </ul>
             </Fragment>
@@ -36,24 +36,26 @@ class ViewProject extends Component {
             <Fragment />
           ) : (
             <Fragment>
-              <p>Steps:</p>
-              <ol className="steps-list">
+              <p className="section-header">Steps:</p>
+              <ol>
                 {project.steps.map((step, index) => {
-                  return <li key={index}>{step}</li>;
+                  return <li className="text" key={index}>{step}</li>;
                 })}
               </ol>
             </Fragment>
           )}
-          <p>Project Created By: {project.username}</p>
+          <p className="section-header">
+            Created By: <span className="text">{project.username}</span>
+          </p>
 
-          <div id="button-section">
+          <div className="button-section">
             <button className="button" onClick={this.context.handleClickCancel}>
               Back
             </button>
 
             {this.context.currentUserId === project.user_id ? (
               <Fragment>
-                <Link id="link" to={`/edit/${project.id}`}>
+                <Link id="edit-link" to={`/edit/${project.id}`}>
                   <button className="button">Edit Project</button>
                 </Link>
                 <button

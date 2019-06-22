@@ -3,7 +3,6 @@
 exports[`RegistrationForm  component renders without crashing 1`] = `
 <Fragment>
   <form
-    className="signup-form"
     onSubmit={[Function]}
   >
     <div>
@@ -37,6 +36,7 @@ exports[`RegistrationForm  component renders without crashing 1`] = `
       />
       <p
         aria-live="polite"
+        className="small-text"
       >
         Password must be between 8-72 characters and contain at least one uppercase, lowercase, number and special character
       </p>

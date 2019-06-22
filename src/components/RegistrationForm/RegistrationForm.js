@@ -7,7 +7,7 @@ import("./RegistrationForm.css");
 
 class RegistrationForm extends Component {
   static defaultProps = {
-    onRegistrationSuccess: () => {},
+    onRegistrationSuccess: () => {}
   };
 
   static contextType = ProjectContext;
@@ -20,12 +20,12 @@ class RegistrationForm extends Component {
     this.setState({ error: null, isLoading: true });
     AuthApiService.postUser({
       username: username.value,
-      password: password.value,
+      password: password.value
     })
       .then(res => {
         AuthApiService.postLogin({
           username: username.value,
-          password: password.value,
+          password: password.value
         }).then(res => {
           this.context.setCurrentUser(username.value);
           this.context.setCurrentUserId(res.user_id);
@@ -47,10 +47,7 @@ class RegistrationForm extends Component {
         {this.state.isLoading && this.state.error === null ? (
           <LoadingIndicator />
         ) : (
-          <form
-            className="signup-form"
-            onSubmit={this.handleRegistrationFormSubmit}
-          >
+          <form onSubmit={this.handleRegistrationFormSubmit}>
             {this.state.error !== null && this.state.error !== undefined ? (
               <p className="error">{this.state.error}</p>
             ) : (
@@ -77,7 +74,7 @@ class RegistrationForm extends Component {
                 aria-required="true"
                 required
               />
-              <p aria-live="polite">
+              <p aria-live="polite" className="small-text">
                 Password must be between 8-72 characters and contain at least
                 one uppercase, lowercase, number and special character
               </p>

@@ -2,7 +2,7 @@
 
 exports[`Login component renders without crashing 1`] = `
 <div
-  className="form-container"
+  className="main-container"
 >
   <LoginForm
     onLoginSuccess={[Function]}

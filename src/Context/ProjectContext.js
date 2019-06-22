@@ -1,26 +1,26 @@
 import React from "react";
 
 const ProjectContext = React.createContext({
+  clearError: () => {},
+  clearProject: () => {},
   currentUser: "",
   currentUserId: '',
-  project: "",
-  projectList: [],
+  deleteProject: () => {},
+  editProject: () => {},
+  error: null,
+  handleClickCancel: () => {},
   handleLogin: () => {},
+  handleLoginSuccess: () => {},
   handleUsernameChange: () => {},
   handleSubmitNewProject: () => {},
-  editProject: () => {},
+  project: "",
+  projectList: [],
+  redirectToLogin: () => {},
   setCurrentUser: () => {},
   setCurrentUserId: () => {},
-  error: null,
   setError: () => {},
-  clearError: () => {},
   setProject: () => {},
-  clearProject: () => {},
   setProjectList: () => {},
-  redirectToLogin: () => {},
-  deleteProject: () => {},
-  handleClickCancel: () => {},
-  handleLoginSuccess: () => {},
 });
 
 export default ProjectContext;

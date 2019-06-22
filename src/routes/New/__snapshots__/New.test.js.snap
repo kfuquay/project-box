@@ -1,12 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`New component renders without crashing 1`] = `
-<Fragment>
-  <h1
+<div
+  className="main-container"
+>
+  <h3
     className="large-text"
   >
     New Project
-  </h1>
+  </h3>
   <ProjectForm
     params={
       Object {
@@ -14,5 +16,5 @@ exports[`New component renders without crashing 1`] = `
       }
     }
   />
-</Fragment>
+</div>
 `;

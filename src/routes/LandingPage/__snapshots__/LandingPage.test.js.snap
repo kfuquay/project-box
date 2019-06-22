@@ -2,7 +2,7 @@
 
 exports[`LandingPage component renders without crashing 1`] = `
 <div
-  className="landingpage-container"
+  className="main-container"
 >
   <section>
     <header
@@ -18,7 +18,7 @@ exports[`LandingPage component renders without crashing 1`] = `
       src="tools.png"
     />
     <p
-      className="text"
+      className="lp-text text"
     >
       Project Box helps you record how you made that thing! Like grandma's old recipe book, Project Box is a reliable reference that helps you remember the recipe for your project.
     </p>
@@ -28,7 +28,7 @@ exports[`LandingPage component renders without crashing 1`] = `
       className="large-text"
     >
       <h3>
-        Record your projects
+        Record
       </h3>
     </header>
     <img
@@ -37,7 +37,7 @@ exports[`LandingPage component renders without crashing 1`] = `
       src="knit.png"
     />
     <p
-      className="text"
+      className="lp-text text"
     >
       Record your projects with ease, simply input your materials list, process pictures, steps, and any other notes relevant to your project
     </p>
@@ -47,7 +47,7 @@ exports[`LandingPage component renders without crashing 1`] = `
       className="large-text"
     >
       <h3>
-        Discover new projects
+        Discover
       </h3>
     </header>
     <img
@@ -56,7 +56,7 @@ exports[`LandingPage component renders without crashing 1`] = `
       src="paint.png"
     />
     <p
-      className="text"
+      className="lp-text text"
     >
       Browse project box and get started on your next craft
     </p>

@@ -44,11 +44,11 @@ class LoginForm extends Component {
           <LoadingIndicator />
         ) : (
           <Fragment>
-            <form className="login-form" onSubmit={this.handleSubmitJwtAuth}>
+            <form onSubmit={this.handleSubmitJwtAuth}>
               <div role="alert">
                 {error && <p className="error">{error}</p>}
               </div>
-              <div className="form-section">
+              <div>
                 <label htmlFor="username">Username</label>
                 <input
                   type="text"
@@ -60,7 +60,7 @@ class LoginForm extends Component {
                   required
                 />
               </div>
-              <div className="form-section">
+              <div>
                 <label htmlFor="password">Password</label>
                 <input
                   type="password"
@@ -71,7 +71,7 @@ class LoginForm extends Component {
                   required
                 />
               </div>
-              <div className="form-section">
+              <div>
                 <button type="submit">Submit</button>
               </div>
             </form>

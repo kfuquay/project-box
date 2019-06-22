@@ -14,13 +14,13 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div className="landingpage-container">
+      <div className="main-container">
         <section>
           <header className="large-text">
             <h3>A Place For Projects</h3>
           </header>
           <img src={tools} alt="craft tools on paper" className="img" />
-          <p className="text">
+          <p className="lp-text text">
             Project Box helps you record how you made that thing! Like grandma's
             old recipe book, Project Box is a reliable reference that helps you
             remember the recipe for your project.
@@ -28,10 +28,10 @@ class LandingPage extends Component {
         </section>
         <section>
           <header className="large-text">
-            <h3>Record your projects</h3>
+            <h3>Record</h3>
           </header>
           <img src={knit} alt="yellow knit" className="img" />
-          <p className="text">
+          <p className="lp-text text">
             Record your projects with ease, simply input your materials list,
             process pictures, steps, and any other notes relevant to your
             project
@@ -39,10 +39,10 @@ class LandingPage extends Component {
         </section>
         <section>
           <header className="large-text">
-            <h3>Discover new projects</h3>
+            <h3>Discover</h3>
           </header>
           <img src={paint} alt="colorful artists paints" className="img" />
-          <p className="text">
+          <p className="lp-text text">
             Browse project box and get started on your next craft
           </p>
         </section>

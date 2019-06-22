@@ -5,13 +5,19 @@ exports[`ProjectTile Component renders correctly given project prop 1`] = `
   className="tile"
   to="/project/1"
 >
-  <img
-    alt=""
-    className="tile-img"
-    src="blahs"
-  />
+  <div
+    className="tile-container"
+  >
+    <p
+      className="tile-img"
+    >
+      T
+    </p>
+  </div>
   <h3
     className="tile-title"
-  />
+  >
+    test
+  </h3>
 </Link>
 `;

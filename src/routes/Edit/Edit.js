@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react'
+import React, { Component } from 'react'
 import ProjectContext from '../../Context/ProjectContext'
 import ProjectForm from '../../components/ProjectForm/ProjectForm'
 
@@ -11,10 +11,10 @@ class Edit extends Component {
             project => project.id === Number(this.props.match.params.id)
           );
         return(
-            <Fragment>
+            <div className="main-container">
                 <h1 className="large-text">Edit </h1>
                 <ProjectForm params={{ edit: 'Y', project: {...project} }} />
-            </Fragment>
+            </div>
         )
     }
 }

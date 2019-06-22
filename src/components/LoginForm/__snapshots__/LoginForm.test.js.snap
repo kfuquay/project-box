@@ -3,15 +3,12 @@
 exports[`LoginForm component renders without crashing 1`] = `
 <Fragment>
   <form
-    className="login-form"
     onSubmit={[Function]}
   >
     <div
       role="alert"
     />
-    <div
-      className="form-section"
-    >
+    <div>
       <label
         htmlFor="username"
       >
@@ -26,9 +23,7 @@ exports[`LoginForm component renders without crashing 1`] = `
         type="text"
       />
     </div>
-    <div
-      className="form-section"
-    >
+    <div>
       <label
         htmlFor="password"
       >
@@ -43,9 +38,7 @@ exports[`LoginForm component renders without crashing 1`] = `
         type="password"
       />
     </div>
-    <div
-      className="form-section"
-    >
+    <div>
       <button
         type="submit"
       >

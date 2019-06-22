@@ -6,20 +6,20 @@ exports[`Navigation component renders without crashing 1`] = `
 >
   <h1>
     <NavLink
-      className="header link"
+      className="header nav-link"
       to="/"
     >
       Project Box
     </NavLink>
   </h1>
   <NavLink
-    className="link"
+    className="nav-link"
     to="/dashboard"
   >
     Home
   </NavLink>
   <NavLink
-    className="link"
+    className="nav-link"
     to="/login"
   >
     Log In
