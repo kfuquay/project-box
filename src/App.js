@@ -42,8 +42,8 @@ class App extends Component {
   };
 
   handleSubmitNewProject = project => {
-    ProjectsApiService.postProject(project);
-    this.props.history.push("/dashboard");
+    ProjectsApiService.postProject(project)
+    .then(() => this.props.history.push("/dashboard"))
   };
 
   editProject = project => {
@@ -81,8 +81,8 @@ class App extends Component {
   };
 
   deleteProject = projectId => {
-    ProjectsApiService.deleteProject(projectId);
-    this.props.history.push("/dashboard");
+    ProjectsApiService.deleteProject(projectId)
+    .then(() => this.props.history.push("/dashboard"))
   };
 
   redirectToLogin = () => {
