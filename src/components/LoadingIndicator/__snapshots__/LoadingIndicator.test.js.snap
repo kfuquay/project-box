@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingIndicator component renders without crashing 1`] = `
+<div
+  className="loading-container main-container"
+>
+  <i
+    className="fas fa-palette fa-spin spinner"
+  />
+   
+  <p
+    className="text"
+  >
+    Loading...
+  </p>
+</div>
+`;
