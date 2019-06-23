@@ -113,7 +113,7 @@ class ProjectForm extends Component {
               type="text"
               name="title"
               id="title"
-              placeholder="knit sweater"
+              placeholder="Project Title..."
               value={this.state.title}
               onChange={this.handleTitleChange}
               aria-required="true"
@@ -123,6 +123,7 @@ class ProjectForm extends Component {
           <div>
             <label htmlFor="summary"> Summary </label>
             <textarea
+              placeholder="Summary..."
               name="summary"
               id="summary"
               rows="15"
