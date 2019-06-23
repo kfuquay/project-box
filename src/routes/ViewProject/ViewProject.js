@@ -18,8 +18,8 @@ class ViewProject extends Component {
       <Fragment>
         <section className="main-container">
           <h1 className="large-text">{project.title}</h1>
-          <p className="section-header">Summary: </p>
-          <p className="view-text text">{project.summary}</p>
+          <p className="section-header first-section">Summary: </p>
+          <p className="alt-text view-text">{project.summary}</p>
           {project.materials[0] === "" ? (
             <Fragment />
           ) : (
@@ -27,7 +27,11 @@ class ViewProject extends Component {
               <p className="section-header">Materials Needed:</p>{" "}
               <ul>
                 {project.materials.map((material, index) => {
-                  return <li  className="text" key={index}>{material}</li>;
+                  return (
+                    <li className="alt-text view-text" key={index}>
+                      {material}
+                    </li>
+                  );
                 })}
               </ul>
             </Fragment>
@@ -39,13 +43,17 @@ class ViewProject extends Component {
               <p className="section-header">Steps:</p>
               <ol>
                 {project.steps.map((step, index) => {
-                  return <li className="text" key={index}>{step}</li>;
+                  return (
+                    <li className="alt-text view-text" key={index}>
+                      {step}
+                    </li>
+                  );
                 })}
               </ol>
             </Fragment>
           )}
           <p className="section-header">
-            Created By: <span className="text">{project.username}</span>
+            Created By: <span className="alt-text text">{project.username}</span>
           </p>
 
           <div className="button-section">

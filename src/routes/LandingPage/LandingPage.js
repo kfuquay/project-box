@@ -26,7 +26,7 @@ class LandingPage extends Component {
             remember the recipe for your project.
           </p>
         </section>
-        <section>
+        <section className="lp-section">
           <header className="large-text">
             <h3>Record</h3>
           </header>
@@ -37,7 +37,7 @@ class LandingPage extends Component {
             project
           </p>
         </section>
-        <section>
+        <section className="lp-section">
           <header className="large-text">
             <h3>Discover</h3>
           </header>
@@ -46,7 +46,7 @@ class LandingPage extends Component {
             Browse project box and get started on your next craft
           </p>
         </section>
-        <section>
+        <section className="lp-section">
           <header className="large-text">
             <h3>Join</h3>
           </header>

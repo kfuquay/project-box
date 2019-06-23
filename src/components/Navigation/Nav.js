@@ -1,4 +1,4 @@
-import React, { Component, Fragment} from "react";
+import React, { Component, Fragment } from "react";
 import TokenService from "../../services/token-service";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
@@ -15,9 +15,13 @@ class Navigation extends Component {
     return (
       <Fragment>
         <NavLink to="/new" className="nav-link">
-          +Project
+          <i className="fas fa-plus icon" />
         </NavLink>
-        <NavLink className="nav-link" onClick={this.handleLogoutClick} to="/login">
+        <NavLink
+          className="nav-link"
+          onClick={this.handleLogoutClick}
+          to="/login"
+        >
           Logout
         </NavLink>
       </Fragment>

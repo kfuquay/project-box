@@ -15,14 +15,13 @@ section .lp-text {
   text-align: center;
 }
 
+.lp-section {
+  margin-top: 50px;
+}
+
 /* DESKTOP */
 @media only screen and (min-width: 1024px) {
-  h3 {
-    margin: 20px auto;
-  }
-  .large-text {
-    font-size: 3vw;
-  }
+  
   section .text {
     font-size: 1.2vw;
     line-height: 1.7vw;

@@ -16,7 +16,7 @@
 .tile-title {
     padding: 10px;
     flex: 1;
-    max-width: 275px;
+    max-width: 250px;
     background: #333;
     color: whitesmoke;
     margin: 0;
@@ -31,9 +31,9 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    background: darkviolet;
+    background: rgb(148, 0, 211);
     height: 250px;
-    width: 275px;
+    width: 250px;
     border-radius: 10px 10px 0 0;
     background-size: cover;
 }

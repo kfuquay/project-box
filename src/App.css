@@ -1,5 +1,5 @@
 .app {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
 .main-container {
@@ -14,6 +14,7 @@ input {
   padding: 15px;
   border: none;
   width: 100%;
+  font-family: 'Hind', sans-serif;
 }
 
 label {
@@ -24,7 +25,6 @@ label {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  /* padding: 50px 0; */
 }
 
 form {
@@ -76,10 +76,6 @@ button:hover {
   text-align: center;
   color: whitesmoke;
 }
-/* 
-.large-text h3 {
-  font-size: 24px;
-} */
 
 h3 {
     font-size: 24px;
@@ -96,10 +92,18 @@ h3 {
     line-height: 18px;
     color: whitesmoke;
     font-weight: 300;
-
 }
-/* 
-.small-text {
-  font-size: 13px;
-  color: #333;
-} */
+
+.alt-text {
+  font-family: 'Hind', 'Oswald', sans-serif;
+  letter-spacing: 0.09em;
+  text-transform: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  h3 {
+    margin: 100px auto 50px auto;
+    font-size: 35px;
+    letter-spacing: 0.15em;
+  }
+}

@@ -36,7 +36,7 @@ exports[`RegistrationForm  component renders without crashing 1`] = `
       />
       <p
         aria-live="polite"
-        className="small-text"
+        className="small-text alt-text"
       >
         Password must be between 8-72 characters and contain at least one uppercase, lowercase, number and special character
       </p>

@@ -23,7 +23,9 @@ exports[`LandingPage component renders without crashing 1`] = `
       Project Box helps you record how you made that thing! Like grandma's old recipe book, Project Box is a reliable reference that helps you remember the recipe for your project.
     </p>
   </section>
-  <section>
+  <section
+    className="lp-section"
+  >
     <header
       className="large-text"
     >
@@ -42,7 +44,9 @@ exports[`LandingPage component renders without crashing 1`] = `
       Record your projects with ease, simply input your materials list, process pictures, steps, and any other notes relevant to your project
     </p>
   </section>
-  <section>
+  <section
+    className="lp-section"
+  >
     <header
       className="large-text"
     >
@@ -61,7 +65,9 @@ exports[`LandingPage component renders without crashing 1`] = `
       Browse project box and get started on your next craft
     </p>
   </section>
-  <section>
+  <section
+    className="lp-section"
+  >
     <header
       className="large-text"
     >
