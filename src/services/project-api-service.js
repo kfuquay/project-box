@@ -46,7 +46,6 @@ const ProjectsApiService = {
             throw error;
           });
         }
-        // return res.json();
       })
       .catch(error => {
         console.error(error);
