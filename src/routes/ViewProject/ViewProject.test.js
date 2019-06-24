@@ -27,31 +27,32 @@ import enzyme, { shallow } from "enzyme";
 //   expect(wrapper).not.toBeNull();
 // });
 
-import React from "react";
-import ViewProject from './ViewProject';
-import { mount } from 'enzyme';
 
-// ensure you're resetting modules before each test
-beforeEach(() => {
-  jest.resetModules();
-});
+// import React from "react";
+// import ViewProject from './ViewProject';
+// import { mount } from 'enzyme';
 
-// Takes the context data we want to test, or uses defaults
-const getProjectListContext = (context = {projectList: [{title: 'test', summary: 'test', id: 1}]}) => {
+// // ensure you're resetting modules before each test
+// beforeEach(() => {
+//   jest.resetModules();
+// });
+
+// // Takes the context data we want to test, or uses defaults
+// const getProjectListContext = (context = {projectList: [{title: 'test', summary: 'test', id: 1}]}) => {
   
-  // Will then mock the ProjectContext module being used in Edit component
-  jest.doMock('../../Context/ProjectContext.js', () => {
-    return {
-      getProjectListContext: {
-        Consumer: (props) => props.children(context)
-      }
-    }
-  });
+//   // Will then mock the ProjectContext module being used in Edit component
+//   jest.doMock('../../Context/ProjectContext.js', () => {
+//     return {
+//       getProjectListContext: {
+//         Consumer: (props) => props.children(context)
+//       }
+//     }
+//   });
   
-  // you need to re-require after calling jest.doMock.
-  // return the updated Edit module that now includes the mocked context
-  return require('./ViewProject').ViewProject;
-};
+//   // you need to re-require after calling jest.doMock.
+//   // return the updated Edit module that now includes the mocked context
+//   return require('./ViewProject').ViewProject;
+// };
 
 describe.skip('<ViewProject />', () => {
   it('should return one <h1></h1>', () => {
