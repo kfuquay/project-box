@@ -8,6 +8,10 @@ nav {
   flex-direction: row;
 }
 
+.header {
+  font-family: "Permanent Marker", cursive;
+}
+
 .icon {
   color: whitesmoke;
   font-size: 13px;
