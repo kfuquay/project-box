@@ -17,6 +17,7 @@ class ProjectForm extends Component {
 
   static contextType = ProjectContext;
 
+  //check that user is logged in, if user navigated to /new from edit button, prepopulate form with selected project's info
   componentDidMount() {
     if (!TokenService.hasAuthToken()) {
       this.context.redirectToLogin();

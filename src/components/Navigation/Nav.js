@@ -11,6 +11,7 @@ class Navigation extends Component {
     TokenService.clearAuthToken();
   };
 
+  // render logout and add project links only if user is currently logged in
   renderLogoutLink() {
     return (
       <Fragment>
@@ -28,6 +29,7 @@ class Navigation extends Component {
     );
   }
 
+  //if user is not logged in, render login link
   renderLoginLink() {
     return (
       <NavLink to="/login" className="nav-link">

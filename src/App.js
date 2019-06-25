@@ -31,6 +31,7 @@ class App extends Component {
     };
   }
 
+  //the following functions are distributed through app in ProjectContext
   clearError = () => {
     this.setState({ error: null });
   };

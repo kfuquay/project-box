@@ -14,6 +14,9 @@ class RegistrationForm extends Component {
 
   state = { error: null, isLoading: false };
 
+  //check user input against users table in db, ensure user input matches required parameters (password must be at least 8 chars etc.) 
+  //show LoadingIndicator/spinner whilst waiting for response from server
+  //on successful registration, store username and userid in context 
   handleRegistrationFormSubmit = e => {
     e.preventDefault();
     const { username, password } = e.target;

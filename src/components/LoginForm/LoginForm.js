@@ -13,6 +13,7 @@ class LoginForm extends Component {
 
   state = { error: null, isLoading: false };
 
+  //log in user, render LoadingIndicator/spinner whilst waiting for response from server
   handleSubmitJwtAuth = e => {
     e.preventDefault();
     this.setState({ error: null, isLoading: true });

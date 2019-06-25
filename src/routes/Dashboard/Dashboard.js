@@ -17,7 +17,7 @@ class Dashboard extends React.Component {
       isLoading: false,
     };
   }
-
+  // Get all projects from db, show Loading Indicator/spinner while waiting for response from serve
   componentDidMount() {
     this.context.clearError();
     this.setState({ isLoading: true });
@@ -27,6 +27,7 @@ class Dashboard extends React.Component {
       .catch(this.context.setError);
   }
 
+  //search through projects, this search meathod will only show exact matches to user's query
   handleSearch = () => {
     const query = this.state.query;
     if (query.length >= 1) {

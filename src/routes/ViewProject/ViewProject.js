@@ -11,6 +11,7 @@ class ViewProject extends Component {
   static contextType = ProjectContext;
 
   render() {
+    //Get selected project
     const project = this.context.projectList.find(
       project => project.id === Number(this.props.match.params.id)
     );
@@ -61,6 +62,7 @@ class ViewProject extends Component {
               Back
             </button>
 
+            {/* render edit and delete buttons only if current user created that project */}
             {this.context.currentUserId === project.user_id ? (
               <Fragment>
                 <Link id="edit-link" to={`/edit/${project.id}`}>
