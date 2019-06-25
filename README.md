@@ -19,7 +19,11 @@
 
 ![Dashboard](/public/pboxdash.png)
 
+##   [DEMO](http://project-box.now.sh)
 
+To try Project Box using a demo account, navigate to the login page and type username 'test' with password 'Testing123!'.  
+Upon login you will be redirected to the dashboard page, where you can browse through existing projects.  
+If you'd like to add a project of your own, simply click the plus icon in the navigation bar, and you will be redirected to the new project form.
 
 ##  TECH STACK:
 
