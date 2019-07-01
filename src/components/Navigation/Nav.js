@@ -5,7 +5,9 @@ import "./Nav.css";
 import ProjectContext from "../../Context/ProjectContext";
 
 class Navigation extends Component {
+
   static contextType = ProjectContext;
+
   handleLogoutClick = () => {
     this.context.setCurrentUser("");
     TokenService.clearAuthToken();

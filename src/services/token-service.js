@@ -10,6 +10,9 @@ const TokenService = {
   hasAuthToken() {
     return !!TokenService.getAuthToken()
   },
+  clearAuthToken() {
+    window.sessionStorage.removeItem(config.TOKEN_KEY)
+  },
 }
 
 export default TokenService
