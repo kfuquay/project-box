@@ -11,7 +11,6 @@ class ViewProject extends Component {
   static contextType = ProjectContext;
 
   render() {
-    console.log(this.context)
     //Get selected project
     const project = this.context.projectList.find(
       project => project.id === Number(this.props.match.params.id)

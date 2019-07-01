@@ -1,83 +1,110 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LandingPage component renders without crashing 1`] = `
-<div
-  className="main-container"
->
-  <section>
-    <header
-      className="large-text"
-    >
-      <h3>
-        A Place For Projects
-      </h3>
-    </header>
-    <img
-      alt="craft tools on paper"
-      className="img"
-      src="tools.png"
-    />
-    <p
-      className="lp-text text"
-    >
-      Project Box helps you record how you made that thing! Like grandma's old recipe book, Project Box is a reliable reference that helps you remember the recipe for your project.
-    </p>
-  </section>
-  <section
-    className="lp-section"
+<Fragment>
+   
+  <div
+    className="main-container"
   >
-    <header
-      className="large-text"
+    <section>
+      <header
+        className="large-text"
+      >
+        <h3>
+          A Place For Projects
+        </h3>
+      </header>
+      <img
+        alt="craft tools on paper"
+        className="img"
+        src="tools.png"
+      />
+      <p
+        className="lp-text text"
+      >
+        Project Box helps you record how you made that thing! Like grandma's old recipe book, Project Box is a reliable reference that helps you remember the recipe for your project.
+      </p>
+    </section>
+    <section
+      className="lp-section"
     >
-      <h3>
-        Record
-      </h3>
-    </header>
-    <img
-      alt="yellow knit"
-      className="img"
-      src="knit.png"
-    />
-    <p
-      className="lp-text text"
+      <header
+        className="large-text"
+      >
+        <h3>
+          Record
+        </h3>
+      </header>
+      <img
+        alt="yellow knit"
+        className="img"
+        src="knit.png"
+      />
+      <p
+        className="lp-text text"
+      >
+        Record your projects with ease, simply input your materials list, process pictures, steps, and any other notes relevant to your project
+      </p>
+    </section>
+    <section
+      className="lp-section"
     >
-      Record your projects with ease, simply input your materials list, process pictures, steps, and any other notes relevant to your project
-    </p>
-  </section>
-  <section
-    className="lp-section"
-  >
-    <header
-      className="large-text"
+      <header
+        className="large-text"
+      >
+        <h3>
+          Discover
+        </h3>
+      </header>
+      <img
+        alt="colorful artists paints"
+        className="img"
+        src="paint.png"
+      />
+      <p
+        className="lp-text text"
+      >
+        Browse project box and get started on your next craft
+      </p>
+    </section>
+    <section
+      className="lp-section"
     >
-      <h3>
-        Discover
-      </h3>
-    </header>
-    <img
-      alt="colorful artists paints"
-      className="img"
-      src="paint.png"
-    />
-    <p
-      className="lp-text text"
+      <header
+        className="large-text"
+      >
+        <h3>
+          Demo
+        </h3>
+      </header>
+      <p
+        className="lp-text text"
+      >
+        <button
+          className="lp-text text"
+          id="unbutton"
+          onClick={[Function]}
+        >
+          Click
+        </button>
+         through to demo Project Box
+      </p>
+    </section>
+    <section
+      className="lp-section"
     >
-      Browse project box and get started on your next craft
-    </p>
-  </section>
-  <section
-    className="lp-section"
-  >
-    <header
-      className="large-text"
-    >
-      <h3>
-        Join
-      </h3>
-    </header>
-    <RegistrationForm
-      onRegistrationSuccess={[Function]}
-    />
-  </section>
-</div>
+      <header
+        className="large-text"
+      >
+        <h3>
+          Join
+        </h3>
+      </header>
+      <RegistrationForm
+        onRegistrationSuccess={[Function]}
+      />
+    </section>
+  </div>
+   
+</Fragment>
 `;
